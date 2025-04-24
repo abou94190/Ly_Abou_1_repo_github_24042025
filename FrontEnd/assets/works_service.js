@@ -1,3 +1,4 @@
+// Exporte une fonction asynchrone pour récupérer les travaux depuis l'API
 export async function fetchWorks() {
     try {
         const response = await fetch("http://localhost:5678/api/works");
@@ -9,6 +10,7 @@ export async function fetchWorks() {
     }
 }
 
+// Exporte une fonction asynchrone pour supprimer un travail
 export async function deleteWork(workId, token) {
     try {
         const response = await fetch(`http://localhost:5678/api/works/${workId}`, {
@@ -31,6 +33,7 @@ export async function deleteWork(workId, token) {
     }
 }
 
+// Exporte une fonction asynchrone pour ajouter un travail
 export async function addWork(formData, token) {
     try {
         const response = await fetch("http://localhost:5678/api/works", {
